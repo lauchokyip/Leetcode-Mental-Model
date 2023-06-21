@@ -87,7 +87,7 @@ def transversal(root):
 ```
 #### These are what we call a BFS (not inclusing detecting loop)
 iv) Level order transversal
-```
+```python
 def transversal(root):
     queue = []
     queue.push(root)
