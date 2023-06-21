@@ -49,4 +49,56 @@ whole code will look like
 -> Transverse (only going forward, no going backward) </br>
 -> We can reoorder it by (add, remove) </br>
 **The last thing which is pretty uncommon:** </br>
--> We can use two pointers to find the gap
+-> We can use two pointers to find the gap. Gap can be from the **end to the mid point** or any arbitary gap. </br>
+-> We can use two pointers to find whether the linkedlist has a loop
+
+### Tree
+There is different ways of transversing a tree, for the first 3 , it's just the different of where you want to put the print position </br>
+#### These are what we call a DFS (not inclusing detecting loop)
+i) Preorder Transversal
+```python
+def transversal(root):
+   if root == None:
+     return 
+   
+   print(root.val)
+   transversal(root.left)
+   transversal(root.right)
+```
+ii) Inorder Transversal
+```python
+def transversal(root):
+   if root == None:
+     return 
+     
+   transversal(root.left)
+   print(root.val)
+   transversal(root.right)
+```
+iii) Postorder Transversal
+```python
+def transversal(root):
+   if root == None:
+     return 
+     
+   transversal(root.left)
+   transversal(root.right)
+   print(root.val)
+```
+#### These are what we call a BFS (not inclusing detecting loop)
+iv) Level order transversal
+```
+def transversal(root):
+    queue = []
+    queue.push(root)
+    
+    while(len(queue) != 0):
+        head = queue.pop()
+        
+        if head.left != None:
+           queue.push(head.left)
+        if head.right != None:
+           queue.push(head.right)
+           
+        print(head)
+```
