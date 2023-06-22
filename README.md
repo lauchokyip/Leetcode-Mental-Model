@@ -1,6 +1,8 @@
 # Leetcode-Mental-Model
 This is to help myself build a mental representation on how to approach Leetcode problem
 
+### How to detect a duplication/loop
+You need to remember if you have been there, a set is a good Data Structure to remember it
 
 ### Binary Search in Rotated & Sorted Array
 * Find pivot, so we can seperate an array into two part
@@ -102,3 +104,5 @@ def transversal(root):
            
         print(head)
 ```
+#### Tree can be produced from an array
+https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
