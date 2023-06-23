@@ -53,6 +53,7 @@ whole code will look like
 **The last thing which is pretty uncommon:** </br>
 -> We can use two pointers to find the gap. Gap can be from the **end to the mid point** or any arbitary gap. </br>
 -> We can use two pointers to find whether the linkedlist has a loop
+* If we want to access the previous node, for example in a HashLinkedList where we get the node we want to remove but we also need to use the previous node, we should use a double linked list
 
 ### Tree
 There is different ways of transversing a tree, for the first 3 , it's just the different of where you want to put the print position </br>
