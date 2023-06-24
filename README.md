@@ -107,3 +107,8 @@ def transversal(root):
 ```
 #### Tree can be produced from an array
 https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
+
+### Trie 
+![image](https://github.com/lauchokyip/Leetcode-Mental-Model/assets/42656921/4f3d2e25-2756-45ab-8a9b-aa802aa29d08)
+* Instead of each TrieNode storing val, each node is storing a mapping for character to another TrieNode. We aren't using a `dict` for the mapping because mapping is slower than array in the sense that when the map is expanding or when querying, map collision will happen
+* Now we have the tree, how do we know if the word ends in the characters, maybe we have trynna, and t/ r/ try etc etc will be valid if we don't know where to stop. That's why we need another attribute to know when to stop.
