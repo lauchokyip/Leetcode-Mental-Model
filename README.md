@@ -13,8 +13,8 @@ You need to remember if you have been there, a set is a good Data Structure to r
 [2,3,4,0,1] # [2,3,4] [0,1]
 [1,2,3,4,0] # [1,2,3,4] [0]
 ```
-* How do we find pivot ?
-This is a good exercise to start https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/. We search for the minimum in a rotated sorted array then we would see if it's on index 0. </br>
+* How do we find pivot ? <br>
+This is a good exercise to start https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/. We search for the minimum in a rotated sorted array then we would see if it's on index 0. </br></br>
 Basic idea is: <br>
 i) we need to find the `mid`, `l + (r-l)//2`, if arr[mid] > arr[r], then violates the property that it's always increasing, so the smallest is somewhere in the right </br>
 ii) When calculating `mid`, there are two scenarios, if we do `while l < r`, if we have `0 1 2`, mid will be 1, but if we have `0 1` mid will be 0. </br>
@@ -132,4 +132,8 @@ def transversal(root):
 * A lot of times we would want to **sort the start time** first
 * A lot of times we would also need to think about **making all the intervals into a straight line** (merging)
 * Edge cases would be when we have [[1,2],[2,3]], this would be considered as overlapping
+* How do we detect overlapping? </br>
+  ```
+  interval[0] <= nextInterval[1] or interval[1] >= nextInterval[0] 
+  ```
 
