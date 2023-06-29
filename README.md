@@ -16,7 +16,7 @@ You need to remember if you have been there, a set is a good Data Structure to r
 * How do we find pivot ?
 This is a good exercise to start https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/. We search for the minimum in a rotated sorted array then we would see if it's on index 0.
 
-Basic idea is:
+Basic idea is: <br>
 i) we need to find the `mid`, `l + (r-l)//2`, if arr[mid] > arr[r], then violates the property that it's always increasing, so the smallest is somewhere in the right </br>
 ii) When calculating `mid`, there are two scenarios, if we do `while l < r`, if we have `0 1 2`, mid will be 1, but if we have `0 1` mid will be 0. </br>
 iii) We know that we reach the minimum when: </br>
@@ -116,5 +116,21 @@ https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
 ### Backtracking
 > DFS is a general graph traversal (and search) algorithm. So it can be applied to any graph (or even forest). Tree is a special kind of Graph, so DFS works for tree as well. Backtracking is a special kind of DFS used mainly for space (memory) saving. It can be used for space saving because usually it has constraints that we need to follow so we don't transverse down the whole tree
 
+Backtracking will often need pruning after visiting the node, so 
+```python
+def transversal(root):
+   if root == None:
+     return 
+   
+   doSomething()
+   transversal(root.left)
+   transversal(root.right)
+   restoreIt()
+```
+
 **So treat backtracking the same as DFS!**
+
+### Intervals
+* A lot of times we would want to sort the start time first
+* A lot of times we would also need to think about making all the intervals into a straight line (merging) 
 
