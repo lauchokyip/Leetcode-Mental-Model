@@ -134,6 +134,17 @@ def transversal(root):
 * Edge cases would be when we have [[1,2],[2,3]], this would be considered as overlapping
 * How do we detect overlapping? </br>
   ```
-  interval[0] <= nextInterval[1] or interval[1] >= nextInterval[0] 
+   |_______|
+  |__________|
+  ```
+  or
+  ```
+     |_______|
+  |_____|
+  ```
+  or
+  ```
+  |_______|
+         |_____|
   ```
 
