@@ -132,17 +132,7 @@ def transversal(root):
 * A lot of times we would want to **sort the start time** first
 * A lot of times we would also need to think about **making all the intervals into a straight line** (merging)
 * Edge cases would be when we have [[1,2],[2,3]], this would be considered as overlapping
-* How do we detect overlapping? </br>
-  ```
-   |_______|
-  |__________|
-  ```
-  or
-  ```
-     |_______|
-  |_____|
-  ```
-  or
+* How do we detect overlapping? </br> , we know the first valus is sorted, so there is only one case
   ```
   |_______|
          |_____|
