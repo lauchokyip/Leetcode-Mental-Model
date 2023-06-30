@@ -54,6 +54,16 @@ whole code will look like
 * If we want to access the previous node, for example in a HashLinkedList where we get the node we want to remove but we also need to use the previous node, we should use a double linked list
 
 ### Tree
+It's usually a good idea to think of the recursive relation
+something like 
+```
+dfs(n) = dfs(n-1) + dfs(n-2)
+```
+or 
+```
+dfs(n) = dfs(n.left) + dfs(n.right)
+```
+
 There is different ways of transversing a tree, for the first 3 , it's just the different of where you want to put the print position </br>
 #### These are what we call a DFS (not inclusing detecting loop)
 i) Preorder Transversal
