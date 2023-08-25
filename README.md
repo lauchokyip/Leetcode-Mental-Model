@@ -126,14 +126,21 @@ https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
 
 Backtracking will often need pruning after visiting the node, so 
 ```python
-def transversal(root):
-   if root == None:
-     return 
-   
-   doSomething()
-   transversal(root.left)
-   transversal(root.right)
-   restoreIt()
+
+def backtrack(candidate):
+    if find_solution(candidate):
+        output(candidate)
+        return
+    
+    # iterate all possible candidates.
+    for next_candidate in list_of_candidates:
+        if is_valid(next_candidate):
+            # try this partial candidate solution
+            place(next_candidate)
+            # given the candidate, explore further.
+            backtrack(next_candidate)
+            # backtrack
+            remove(next_candidate)****
 ```
 
 **So treat backtracking the same as DFS!**
