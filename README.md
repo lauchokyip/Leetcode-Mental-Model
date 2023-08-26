@@ -123,6 +123,7 @@ https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
 
 ### Backtracking
 > DFS is a general graph traversal (and search) algorithm. So it can be applied to any graph (or even forest). Tree is a special kind of Graph, so DFS works for tree as well. Backtracking is a special kind of DFS used mainly for space (memory) saving. It can be used for space saving because usually it has constraints that we need to follow so we don't transverse down the whole tree
+* Usually for backtracking, the leaf nodes are the answer to the challenges, while the intermediate nodes are the potential solutions to the challenges
 
 Backtracking will often need pruning after visiting the node, so 
 ```python
@@ -144,6 +145,31 @@ def backtrack(candidate):
 ```
 
 **So treat backtracking the same as DFS!**
+
+### Sliding windows
+```
+def sliding_window(nums):
+    left, right = 0, 0        # Our window bounds
+    count_of_zeroes = 0       # Track how many 0’s are in the window
+    global_max = 0            # Track the maximum, overall
+    # Iterate over elements in our input
+    while right < len(nums):
+        # Expand the window 
+        if nums[right] == 0:        
+            count_of_zeroes += 1
+        # Meet the condition to stop expansion
+        while count_of_zeroes == 2:
+        # Process the current window
+            global_max = max(global_max, right - left)
+        # Contract the window
+            if nums[left] == 0:
+                count_of_zeroes -= 1
+            left += 1
+        right += 1
+    if count_of_zeroes < 2:
+        global_max = max(global_max, right-left)
+    return global_max
+```
 
 ### Intervals
 * A lot of times we would want to **sort the start time** first
